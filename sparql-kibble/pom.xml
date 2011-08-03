@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tinkerpop</groupId>
     <artifactId>sparql-kibble</artifactId>
-    <version>0.5</version>
+    <version>0.6-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>http://rexster-kibbles.tinkerpop.com</url>
     <name>Rexster Kibbles: SPARQL</name>
@@ -25,17 +25,17 @@
         <dependency>
             <groupId>com.tinkerpop.blueprints</groupId>
             <artifactId>blueprints-core</artifactId>
-            <version>0.9</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.tinkerpop.blueprints</groupId>
             <artifactId>blueprints-sail-graph</artifactId>
-            <version>0.9</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.tinkerpop</groupId>
             <artifactId>rexster</artifactId>
-            <version>0.5</version>
+            <version>0.6-SNAPSHOT</version>
         </dependency>
         <!-- CONFIGURATION -->
         <dependency>
