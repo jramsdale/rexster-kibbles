@@ -8,7 +8,16 @@ import com.tinkerpop.frames.Direction;
 import com.tinkerpop.frames.FramesManager;
 import com.tinkerpop.frames.Property;
 import com.tinkerpop.rexster.RexsterResourceContext;
-import com.tinkerpop.rexster.extension.*;
+import com.tinkerpop.rexster.extension.AbstractRexsterExtension;
+import com.tinkerpop.rexster.extension.ExtensionConfiguration;
+import com.tinkerpop.rexster.extension.ExtensionDefinition;
+import com.tinkerpop.rexster.extension.ExtensionDescriptor;
+import com.tinkerpop.rexster.extension.ExtensionMethod;
+import com.tinkerpop.rexster.extension.ExtensionNaming;
+import com.tinkerpop.rexster.extension.ExtensionPoint;
+import com.tinkerpop.rexster.extension.ExtensionRequestParameter;
+import com.tinkerpop.rexster.extension.ExtensionResponse;
+import com.tinkerpop.rexster.extension.RexsterContext;
 import org.apache.log4j.Logger;
 
 import javax.ws.rs.core.PathSegment;

@@ -4,10 +4,19 @@ package com.tinkerpop.rexster.kibbles.sparql;
 import com.tinkerpop.blueprints.pgm.Graph;
 import com.tinkerpop.blueprints.pgm.Vertex;
 import com.tinkerpop.blueprints.pgm.impls.sail.SailGraph;
-import com.tinkerpop.rexster.ElementJSONObject;
+import com.tinkerpop.blueprints.pgm.util.json.JSONWriter;
 import com.tinkerpop.rexster.RexsterResourceContext;
 import com.tinkerpop.rexster.Tokens;
-import com.tinkerpop.rexster.extension.*;
+import com.tinkerpop.rexster.extension.AbstractRexsterExtension;
+import com.tinkerpop.rexster.extension.ExtensionApi;
+import com.tinkerpop.rexster.extension.ExtensionDefinition;
+import com.tinkerpop.rexster.extension.ExtensionDescriptor;
+import com.tinkerpop.rexster.extension.ExtensionMethod;
+import com.tinkerpop.rexster.extension.ExtensionNaming;
+import com.tinkerpop.rexster.extension.ExtensionPoint;
+import com.tinkerpop.rexster.extension.ExtensionRequestParameter;
+import com.tinkerpop.rexster.extension.ExtensionResponse;
+import com.tinkerpop.rexster.extension.RexsterContext;
 import com.tinkerpop.rexster.util.RequestObjectHelper;
 import org.apache.log4j.Logger;
 import org.codehaus.jettison.json.JSONArray;
@@ -75,9 +84,9 @@ public class SparqlExtension extends AbstractRexsterExtension {
             JSONArray jsonArray = new JSONArray();
 
             for (Map<String, Vertex> map : sparqlResults) {
-                Map<String, ElementJSONObject> mapOfJson = new HashMap<String, ElementJSONObject>();
+                Map<String, JSONObject> mapOfJson = new HashMap<String, JSONObject>();
                 for (String key : map.keySet()) {
-                    mapOfJson.put(key, new ElementJSONObject(map.get(key), returnKeys, showDataTypes));
+                    mapOfJson.put(key, JSONWriter.createJSONElement(map.get(key), returnKeys, showDataTypes));
                 }
 
                 jsonArray.put(new JSONObject(mapOfJson));
