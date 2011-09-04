@@ -28,6 +28,7 @@
         <module>frames-kibble</module>
         <module>sample-kibbles</module>
         <module>sparql-kibble</module>
+        <module>batch-kibble</module>
     </modules>
 
     <repositories>

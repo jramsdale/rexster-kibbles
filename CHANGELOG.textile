@@ -1,0 +1,40 @@
+All releases can be accessed through the TinkerPop Maven2 repository identified below.
+
+```xml
+<repository>
+  <id>tinkerpop-repository</id>
+  <name>TinkerPop Maven2 Repository</name>
+  <url>http://tinkerpop.com/maven2</url>
+</repository>
+```
+
+==<hr/>==
+
+!https://github.com/tinkerpop/rexster/raw/master/doc/images/rexster-dalmatian.png!
+
+h3. Version 0.6 (Dalmatian - NOT OFFICIALLY RELEASED YET)
+
+```xml
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>batch-kibble</artifactId>
+  <version>0.6-SNAPSHOT</version>
+</dependency>
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>frames-kibble</artifactId>
+  <version>0.6-SNAPSHOT</version>
+</dependency>
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>sample-kibbles</artifactId>
+  <version>0.6-SNAPSHOT</version>
+</dependency>
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>sparql-kibble</artifactId>
+  <version>0.6-SNAPSHOT</version>
+</dependency>
+```
+
+* New Batch Kibble makes it possible to execute commands in a batch/transactional fashion.

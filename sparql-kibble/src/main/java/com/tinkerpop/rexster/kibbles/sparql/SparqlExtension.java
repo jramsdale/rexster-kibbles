@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * A simple extension that just echoes back the string parameter passed in.
+ * The SPARQL Extension allows execution of SPARQL queries to Sail implementations.
  */
 @ExtensionNaming(namespace = SparqlExtension.EXTENSION_NAMESPACE, name = SparqlExtension.EXTENSION_NAME)
 public class SparqlExtension extends AbstractRexsterExtension {
