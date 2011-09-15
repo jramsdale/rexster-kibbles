@@ -19,7 +19,7 @@ bc. http://localhost:8182/graphs/sailgraph/tp/sparql?query=SELECT%20%3Fx%20%3Fy%
 
 It is also possible to POST JSON or form data to this URI.  For example:
 
-bc. curl -v -X POST -H "Content-Type:application/json" -d '{"query":"SELECT ?x ?y WHERE { ?x <http://tinkerpop.com#knows> ?y }"}' http://localhost:8182/sailgraph/tp/sparql
+bc. curl -v -X POST -H "Content-Type:application/json" -d '{"query":"SELECT ?x ?y WHERE { ?x <http://tinkerpop.com#knows> ?y }"}' http://localhost:8182/graphs/sailgraph/tp/sparql
 
 will return:
 
