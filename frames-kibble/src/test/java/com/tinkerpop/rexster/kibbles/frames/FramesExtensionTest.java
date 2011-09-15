@@ -314,6 +314,7 @@ public class FramesExtensionTest {
     private UriInfo mockTheUri(final boolean includeFramePath, final String frameNameOfPath) {
         final UriInfo uri = this.mockery.mock(UriInfo.class);
         final List<PathSegment> pathSegments = new ArrayList<PathSegment>();
+        final PathSegment graphsPathSegment = this.mockery.mock(PathSegment.class, "graphsPathSegment");
         final PathSegment graphPathSegment = this.mockery.mock(PathSegment.class, "graphPathSegment");
         final PathSegment elementPathSegment = this.mockery.mock(PathSegment.class, "elementPathSegment");
         final PathSegment elementIdPathSegment = this.mockery.mock(PathSegment.class, "elementIdPathSegment");
@@ -321,6 +322,7 @@ public class FramesExtensionTest {
         final PathSegment extensionPathSegment = this.mockery.mock(PathSegment.class, "extensionPathSegment");
         final PathSegment frameNamePathSegment = this.mockery.mock(PathSegment.class, "frameNamePathSegment");
 
+        pathSegments.add(graphsPathSegment);
         pathSegments.add(graphPathSegment);
         pathSegments.add(elementPathSegment);
         pathSegments.add(elementIdPathSegment);

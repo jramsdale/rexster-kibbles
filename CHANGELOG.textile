@@ -38,3 +38,4 @@ h3. Version 0.6 (Dalmatian - NOT OFFICIALLY RELEASED YET)
 ```
 
 * New Batch Kibble makes it possible to execute commands in a batch/transactional fashion.
+* Bring all Kibbles up to the latest version of REST API changes for the current version of Rexster.

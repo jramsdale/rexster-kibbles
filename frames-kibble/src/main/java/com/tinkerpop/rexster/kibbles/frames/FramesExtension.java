@@ -108,8 +108,8 @@ public class FramesExtension extends AbstractRexsterExtension {
             List<PathSegment> pathSegmentList = uriInfo.getPathSegments();
 
             String domainObjectMappingName = "";
-            if (pathSegmentList.size() > 5) {
-                domainObjectMappingName = pathSegmentList.get(5).getPath();
+            if (pathSegmentList.size() > 6) {
+                domainObjectMappingName = pathSegmentList.get(6).getPath();
             }
 
             if (domainObjectMappingName.isEmpty()) {
