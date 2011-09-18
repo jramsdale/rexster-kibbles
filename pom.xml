@@ -5,11 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tinkerpop.rexster.kibbles</groupId>
     <artifactId>rexster-kibbles</artifactId>
-    <version>0.6-SNAPSHOT</version>
+    <version>0.6</version>
     <packaging>pom</packaging>
     <url>http://rexster-kibbles.tinkerpop.com</url>
     <name>Rexster Kibbles: A collection of general-purposes Rexster Extensions</name>
-    <description>ReXster Kibbles is a collection of general-purpose extensions for the RESTful graph shell ReXster.</description>
+    <description>ReXster Kibbles is a collection of general-purpose extensions for the RESTful graph shell ReXster.
+    </description>
     <inceptionYear>2011</inceptionYear>
     <contributors>
         <contributor>

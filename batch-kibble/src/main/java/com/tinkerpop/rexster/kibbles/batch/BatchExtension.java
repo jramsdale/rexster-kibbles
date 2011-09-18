@@ -16,7 +16,6 @@ import com.tinkerpop.rexster.extension.ExtensionDescriptor;
 import com.tinkerpop.rexster.extension.ExtensionMethod;
 import com.tinkerpop.rexster.extension.ExtensionNaming;
 import com.tinkerpop.rexster.extension.ExtensionPoint;
-import com.tinkerpop.rexster.extension.ExtensionRequestParameter;
 import com.tinkerpop.rexster.extension.ExtensionResponse;
 import com.tinkerpop.rexster.extension.HttpMethod;
 import com.tinkerpop.rexster.extension.RexsterContext;
@@ -107,7 +106,7 @@ public class BatchExtension extends AbstractRexsterExtension {
                     @ExtensionApi(parameterName = "idList", description = API_IDENTIFIERS)
             })
     public ExtensionResponse getEdges(@RexsterContext RexsterResourceContext context,
-                                         @RexsterContext Graph graph) {
+                                      @RexsterContext Graph graph) {
 
         JSONObject requestObject = context.getRequestObject();
         JSONArray idList = requestObject.optJSONArray("idList");
@@ -180,7 +179,7 @@ public class BatchExtension extends AbstractRexsterExtension {
                 } else if (currentAction.equals("update")) {
                     update(txElement, graph);
                 } else if (currentAction.equals("delete")) {
-                    delete(txElement,  graph);
+                    delete(txElement, graph);
                 }
             }
 
@@ -204,8 +203,7 @@ public class BatchExtension extends AbstractRexsterExtension {
                     Response.Status.BAD_REQUEST.getStatusCode(),
                     null,
                     generateErrorJson(extMethod.getExtensionApiAsJson()));
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             rag.tryStopTransactionFailure();
 
             logger.error(ex);
