@@ -10,7 +10,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>sample-kibbles</artifactId>
-    <version>0.7-SNAPSHOT</version>
+    <version>${rexster-kibbles.version}</version>
     <packaging>jar</packaging>
     <url>http://rexster-kibbles.tinkerpop.com</url>
     <name>Rexster Kibbles: Sample</name>
@@ -30,12 +30,12 @@
         <dependency>
             <groupId>com.tinkerpop.blueprints</groupId>
             <artifactId>blueprints-core</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <version>${blueprints.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tinkerpop</groupId>
             <artifactId>rexster</artifactId>
-            <version>0.7-SNAPSHOT</version>
+            <version>${rexster.version}</version>
         </dependency>
         <!-- CONFIGURATION -->
         <dependency>
@@ -85,9 +85,7 @@
             </snapshots>
         </repository>
     </repositories>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+
     <build>
         <directory>${project.basedir}/target</directory>
         <finalName>${project.artifactId}-${project.version}</finalName>
