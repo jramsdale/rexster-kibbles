@@ -12,28 +12,59 @@ All releases can be accessed through the TinkerPop Maven2 repository identified 
 
 !https://github.com/tinkerpop/rexster/raw/master/doc/images/rexster-dalmatian.png!
 
-h3. Version 0.6 (Dalmatian - NOT OFFICIALLY RELEASED YET)
+h3. Version 0.7 (Brian -- NOT OFFICIALLY RELEASED YET)
 
 ```xml
 <dependency>
   <groupId>com.tinkerpop</groupId>
   <artifactId>batch-kibble</artifactId>
-  <version>0.6-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
 </dependency>
 <dependency>
   <groupId>com.tinkerpop</groupId>
   <artifactId>frames-kibble</artifactId>
-  <version>0.6-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
 </dependency>
 <dependency>
   <groupId>com.tinkerpop</groupId>
   <artifactId>sample-kibbles</artifactId>
-  <version>0.6-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
 </dependency>
 <dependency>
   <groupId>com.tinkerpop</groupId>
   <artifactId>sparql-kibble</artifactId>
-  <version>0.6-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
+</dependency>
+```
+
+* New Parameters Sample Kibble shows how to deal with injecting different data types into the request.
+
+==<hr/>==
+
+!https://github.com/tinkerpop/rexster/raw/master/doc/images/rexster-dalmatian.png!
+
+h3. Version 0.6 (Dalmatian -- September 18, 2011)
+
+```xml
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>batch-kibble</artifactId>
+  <version>0.6</version>
+</dependency>
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>frames-kibble</artifactId>
+  <version>0.6</version>
+</dependency>
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>sample-kibbles</artifactId>
+  <version>0.6</version>
+</dependency>
+<dependency>
+  <groupId>com.tinkerpop</groupId>
+  <artifactId>sparql-kibble</artifactId>
+  <version>0.6</version>
 </dependency>
 ```
 
