@@ -43,7 +43,7 @@ public class ParametersExtension extends AbstractSampleExtension {
         }
 
         Map<String, String> map = new HashMap<String, String>();
-        map.put("some-integer", reply);
+        map.put("some-string", reply);
         return ExtensionResponse.ok(map);
     }
 
@@ -91,7 +91,7 @@ public class ParametersExtension extends AbstractSampleExtension {
         }
 
         Map<String, JSONArray> map = new HashMap<String, JSONArray>();
-        map.put("some-integer", reply);
+        map.put("some-list", reply);
         return ExtensionResponse.ok(map);
     }
 
@@ -132,8 +132,8 @@ public class ParametersExtension extends AbstractSampleExtension {
      * a JSONObject for "b" and a JSONArray for "c".
      */
     @ExtensionDefinition(extensionPoint = ExtensionPoint.GRAPH, path = "object")
-    @ExtensionDescriptor(description = "pass a list parameter to be used in the response.")
-    public ExtensionResponse evaluateSomeList(@RexsterContext RexsterResourceContext context,
+    @ExtensionDescriptor(description = "pass an object parameter to be used in the response.")
+    public ExtensionResponse evaluateSomeObject(@RexsterContext RexsterResourceContext context,
                                               @RexsterContext Graph graph,
                                               @ExtensionRequestParameter(name = "a", description = "a list to reply with") Integer reply,
                                               @ExtensionRequestParameter(name = "b", description = "a list to reply with") JSONObject replyObject,
