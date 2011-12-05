@@ -5,7 +5,7 @@ import com.tinkerpop.blueprints.pgm.Edge;
 import com.tinkerpop.blueprints.pgm.Element;
 import com.tinkerpop.blueprints.pgm.Graph;
 import com.tinkerpop.blueprints.pgm.Vertex;
-import com.tinkerpop.blueprints.pgm.util.json.JSONWriter;
+import com.tinkerpop.blueprints.pgm.util.json.GraphSONFactory;
 import com.tinkerpop.rexster.RexsterApplicationGraph;
 import com.tinkerpop.rexster.RexsterResourceContext;
 import com.tinkerpop.rexster.Tokens;
@@ -80,7 +80,7 @@ public class BatchExtension extends AbstractRexsterExtension {
             for (int ix = 0; ix < idList.length(); ix++) {
                 Vertex vertexFound = graph.getVertex(idList.optString(ix));
                 if (vertexFound != null) {
-                    jsonArray.put(JSONWriter.createJSONElement(vertexFound, returnKeys, showDataTypes));
+                    jsonArray.put(GraphSONFactory.createJSONElement(vertexFound, returnKeys, showDataTypes));
                 }
             }
 
@@ -131,7 +131,7 @@ public class BatchExtension extends AbstractRexsterExtension {
             for (int ix = 0; ix < idList.length(); ix++) {
                 Edge edgeFound = graph.getEdge(idList.optString(ix));
                 if (edgeFound != null) {
-                    jsonArray.put(JSONWriter.createJSONElement(edgeFound, returnKeys, showDataTypes));
+                    jsonArray.put(GraphSONFactory.createJSONElement(edgeFound, returnKeys, showDataTypes));
                 }
             }
 
